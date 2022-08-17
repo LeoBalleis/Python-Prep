@@ -93,7 +93,7 @@ a = 5.2 + 4
 a = 3 + 1j
 b = 1 + 3j
 print(a + b)
-
+type(1.2)
 
 # 12) Realizar una operación de suma de un número real y otro complejo
 
