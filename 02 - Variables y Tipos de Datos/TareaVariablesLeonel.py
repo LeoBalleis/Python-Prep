@@ -73,3 +73,4 @@ print(suma3)
 var1 = 'este texto se repite '
 var2 = 3
 print(var1 * var2 + str(var2) + ' veces')
+ 
