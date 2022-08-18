@@ -95,6 +95,7 @@ while (n < tope_rango):
     n += 1
 '''
 #SI SE PUEDE MEJORAR 
+tope_rango=30
 n = 0
 primo = True
 while (n < tope_rango):
@@ -169,6 +170,24 @@ while(n <= 300):
     print(n, ' es divisible por 12')
 print('#############################################################################################################')
 #14) Utilizar la función **input()** que permite hacer ingresos por teclado, para encontrar números primos y dar la opción al usario de buscar el siguiente
+
+np=int(input('ingrese su numero: '))
+    
+while np>=0: 
+    x=1
+    c=0
+    while x <= np:
+        if np % x ==0:
+            c+=1
+        x+=1
+    if c==2:
+        print(f'el numero {np} es primo ')
+        np=int(input('ingrese su numero: '))
+    else:
+        print(f'el numero {np} no es primo ')
+        np=int(input('ingrese su numero: '))
+  
+'''
 n = 1
 sigue = 1
 primo = True
@@ -186,6 +205,8 @@ while (sigue == 1):
     else:
         primo = True
     n += 1
+'''
+
 print('#############################################################################################################')
 #15) Crear un ciclo while que encuentre dentro del rango de 100 a 300 el primer número divisible por 3 y además múltiplo de 6
 n = 100
