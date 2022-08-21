@@ -35,20 +35,34 @@ print(ultimo)
 #15) Mostrar la lista multiplicada por 4
 print(lista*4)
 #16) Crear una tupla que contenga los números enteros del 1 al 20
-tupla=(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20)
+tupla= tuple(range(1,21))
+print(tupla)
 #17) Imprimir desde el índice 10 al 15 de la tupla
 print(tupla[10:16])
 #18) Evaluar si los números 20 y 30 están dentro de la tupla
 print(20 in tupla)
 print(30 in tupla)
 #19) Con la lista creada en el punto 1, validar la existencia del elemento 'París' y si no existe, agregarlo. Utilizar una variable e informar lo sucedido.
+
+elemento = 'París'
+if (not(elemento in lista)):
+    lista.append(elemento)
+    print('Se insertó el elemento', elemento)
+else:
+    print('El elemento', elemento, 'ya existía')
+
+
+
+"""
 elemento = 'París'
 if elemento in lista:
-    print('El elemento', elemento, 'ya existía')   
+    print('El elemento',elemento, 'ya existía')   
 else:
     lista.append(elemento)
     print('Se insertó el elemento', elemento)
 print(lista)
+"""
+
 #20) Mostrar la cantidad de veces que se encuentra un elemento específico dentro de la tupla y de la lista
 print(tupla.count(1))
 print(lista.count('Montevideo'))
