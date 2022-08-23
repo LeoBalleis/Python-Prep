@@ -15,6 +15,8 @@ for i in LISTANEG:
     while i%2==0:
         print (i)
         break
+
+
 print("-----------------------------------------------------------------------------------------------")
 #3) Resolver el punto anterior sin utilizar un ciclo while
 for i in LISTANEG:
