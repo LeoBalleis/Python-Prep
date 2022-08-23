@@ -28,12 +28,13 @@ print(devolverprimos(listarandom))
 print("------------------------------------------------------------------------------------")
    
 #3) Crear una función que al recibir una lista de números, devuelva el que más se repite y cuántas veces lo hace. Si hay más de un "más repetido", que devuelva cualquiera
-listaderepe=[1,2,2,2,3,4,5,6,6,7]
+listaderepe=[1,2,3,3]
 def cuentalistas(lista):   
     nuevodiccrepes=dict(zip(lista,map(lambda x: lista.count(x),lista)))
-    return max(nuevodiccrepes, key=nuevodiccrepes.get) 
+    return max(nuevodiccrepes, key=nuevodiccrepes.get),nuevodiccrepes[max(nuevodiccrepes, key=nuevodiccrepes.get)]
     
-print(f"el que mas se repite es el {cuentalistas(listaderepe)}" )
+valormasrepe,cantidadderepe=cuentalistas(listaderepe)
+print(f" el valor mas repetido es {valormasrepe}, {cantidadderepe} veces ")
 
 """
 def valor_modal(lista):
@@ -61,6 +62,13 @@ print("-------------------------------------------------------------------------
 #4) A la función del punto 3, agregar un parámetro más, que permita elegir si se requiere el menor o el mayor de los mas repetidos.
 listaderepe=[1,2,2,2,3,4,5,6,6,7]
 def cuentalistas(lista,trueofalse):
+    """
+    Devuelve el maximo y el minimo 
+    Aclarando en el segundo parametro True o False
+    True:el que mas se repite
+    False:el que menos se repite
+    
+    """
     if trueofalse== True:
         nuevodiccrepes=dict(zip(lista,map(lambda x: lista.count(x),lista)))
         return max(nuevodiccrepes, key=nuevodiccrepes.get) 
@@ -107,7 +115,7 @@ def conversion_grados(valor, origen, destino):
         print('Parámetro de Origen incorrecto')
     return valor_destino
 
-print(conversion_grados(60,'celsius','farenheit'))
+print(conversion_grados(60.3333,'celsius','farenheit'))
 print("------------------------------------------------------------------------------------")
 
 #6) Iterando una lista con los tres valores posibles de temperatura que recibe la función del punto 5, hacer un print para cada combinación de los mismos:
