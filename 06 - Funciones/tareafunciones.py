@@ -1,6 +1,4 @@
 #1) Crear una función que reciba un número como parámetro y devuelva si True si es primo y False si no lo es
-from re import X
-
 
 def main(numero):
     x=1
@@ -10,9 +8,9 @@ def main(numero):
             c+=1
         x+=1
     if c==2:
-        return True
+        return ("numero primo")
     else:
-        return False
+        return ("no primo")
 print(main(1))        
 print("------------------------------------------------------------------------------------")
 #2) Utilizando la función del punto 1, realizar otra función que reciba de parámetro una lista de números y devuelva sólo aquellos que son primos en otra lista
@@ -28,7 +26,7 @@ print(devolverprimos(listarandom))
 print("------------------------------------------------------------------------------------")
    
 #3) Crear una función que al recibir una lista de números, devuelva el que más se repite y cuántas veces lo hace. Si hay más de un "más repetido", que devuelva cualquiera
-listaderepe=[1,2,3,3]
+listaderepe=[1,2,3,3,4,5,7,7,6,6,6,6]
 def cuentalistas(lista):   
     nuevodiccrepes=dict(zip(lista,map(lambda x: lista.count(x),lista)))
     return max(nuevodiccrepes, key=nuevodiccrepes.get),nuevodiccrepes[max(nuevodiccrepes, key=nuevodiccrepes.get)]

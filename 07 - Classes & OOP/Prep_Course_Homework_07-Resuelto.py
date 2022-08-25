@@ -42,8 +42,6 @@ class Vehiculo:
     
     def Doblar(self, grados):
         self.direccion += grados
-
-
 # 3) Instanciar 3 objetos de la clase vehículo y ejecutar sus métodos, probar luego el resultado
 
 # In[6]:
@@ -88,17 +86,19 @@ class Vehiculo:
         self.direccion += grados
 
     def Estado(self):
-        print('Velocidad:', self.velocidad, '- Dirección:', self.direccion)
+        return('Velocidad:', self.velocidad, '- Dirección:', self.direccion)
 
     def Detalle(self):
-        print('Soy', self.tipo, 'de color', self.color, 'y mi cilindrada es de', self.cilindrada, 'litros')
+        return('Soy', self.tipo, 'de color', self.color, 'y mi cilindrada es de', self.cilindrada, 'litros')
 
 
 # In[13]:
 
 
 a1 = Vehiculo('rojo', 'auto', 2)
-a1.Detalle()
+print(a1.Estado())
+print(a1.Detalle())
+
 
 
 # In[14]:
