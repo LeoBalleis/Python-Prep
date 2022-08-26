@@ -1,6 +1,10 @@
 # Importante: No modificar ni el nombre ni los argumetos que reciben las funciones, sólo deben escribir
 # código dentro de las funciones ya definidas.
 
+from ast import Return
+from math import factorial
+
+
 def Factorial(numero):
     '''
     Esta función devuelve el factorial del número pasado como parámetro.
@@ -12,7 +16,16 @@ def Factorial(numero):
         Factorial(-2) debe retornar nulo
     '''
     #Tu código aca:
-    return 'Funcion incompleta'
+    if(type(numero) != int):
+        return None
+    if(numero <= 0):
+        return None
+    if (numero > 1):
+        numero = numero * Factorial(numero - 1)
+    return numero
+print(Factorial(4))
+
+
 
 def EsPrimo(valor):
     '''
@@ -26,7 +39,27 @@ def EsPrimo(valor):
         EsPrimo(8) debe retornar False
     '''
     #Tu código aca:
-    return 'Funcion incompleta'
+    x=1
+    c=0
+    if type(valor) != int:
+        return None
+    else:
+        while x <= valor:
+            if valor % x==0:
+                c+=1
+            x+=1
+        if c==2:
+            return True
+        else:
+            return False
+
+print(EsPrimo(7)) 
+print(EsPrimo(8))   
+    
+    
+    
+    
+   
     
 def ClaseAnimal(especie, color):
     '''
@@ -46,5 +79,30 @@ def ClaseAnimal(especie, color):
         a.CumpliAnios() -> debe devolver 2
         a.CumpliAnios() -> debe devolver 3
     '''
-    #Tu código aca:
-    return 'Funcion incompleta'
+    class Animal:
+        def __init__(self,especie,color):
+            self.Edad=0
+            self.Especie=especie
+            self.Color=color
+        def CumplirAnios(self):
+             self.Edad+=1
+             return self.Edad
+    a = Animal(especie, color)   
+    return a   
+
+a = ClaseAnimal(12123123,'blanco')
+print(a.CumplirAnios()) 
+print(a.CumplirAnios()) 
+print(a.CumplirAnios()) 
+
+
+
+
+
+
+
+
+
+
+
+   
